@@ -50,7 +50,7 @@ function ChatRoom(props: any) {
 export default ChatRoom;
 
 function ChatMessage(props: any) {
-  const { text, uid, photoURL } = props.message;
+  const { text, uid, photoURL, createdAt } = props.message;
   const messageClass = uid === props.auth.currentUser.uid ? "sent" : "received";
   const avatar =
     photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png";
@@ -59,6 +59,12 @@ function ChatMessage(props: any) {
     <div className={`message ${messageClass}`}>
       <img src={avatar} alt="avatar" />
       <p>{text}</p>
+      {createdAt ? <p>{getReadableTime(createdAt.seconds)}</p> : "now"}
     </div>
   );
+}
+
+function getReadableTime(seconds) {
+  let unix = new Date(seconds * 1000);
+  return unix.toLocaleTimeString();
 }
