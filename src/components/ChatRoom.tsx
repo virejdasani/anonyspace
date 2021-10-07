@@ -22,6 +22,11 @@ function ChatRoom(props: any) {
     });
 
     setFormValue("");
+
+    // This scrolls down to the bottom of the page
+    document.getElementById("appFooter").scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -32,12 +37,16 @@ function ChatRoom(props: any) {
             <ChatMessage auth={props.auth} key={msg.id} message={msg} />
           ))}
         <span ref={dummy}></span>
+        {/* This footer is at the end of the page */}
+        <div id="appFooter"></div>
       </main>
+
       <form onSubmit={sendMessage}>
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
-          placeholder="Type a message"
+          placeholder="Enter a message"
+          autoFocus
         />
         <button type="submit" disabled={formValue === ""}>
           Send
@@ -57,7 +66,7 @@ function ChatMessage(props: any) {
 
   return (
     <div className="messageTime">
-      <div className={`message ${messageClass}`}>
+      <div className={`message ${messageClass}`} id={uid}>
         <img src={avatar} alt="avatar" />
         <p>{text}</p>
       </div>

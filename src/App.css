@@ -75,13 +75,13 @@ form button {
   width: 10%;
   background-color: rgb(45, 45, 45);
   color: white;
-  min-width: 120px;
-
+  /* min-width: 120px; */
+  display: none;
 }
 
 input {
   line-height: 1.5;
-  width: 50%;
+  width: 60%;
   font-size: 1.5rem;
   background: rgb(58, 58, 58);
   color: white;
@@ -91,8 +91,7 @@ input {
   font-family: 'Chakra Petch', sans-serif;
   padding: 30px;
   border-radius: 20px;
-  margin-left: 15%;
-  margin-right: 20px;
+  margin-left: 17%;
 }
 
 button {
