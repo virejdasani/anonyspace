@@ -4,8 +4,11 @@ body {
 
 .App {
   text-align: center;
-  max-width: 650px;
   margin: 0 auto;
+}
+
+.anonyspace {
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .App header {
@@ -15,7 +18,6 @@ body {
   color: white;
   position: fixed;
   width: 100%;
-  max-width: 650px;
   top: 0;
   display: flex;
   align-items: center;
@@ -60,7 +62,6 @@ form {
   bottom: 0;
   background-color: rgb(24, 23, 23);
   width: 100%;
-  max-width: 650px;
   display: flex;
   font-size: 1.5rem;
 }
@@ -83,7 +84,8 @@ input {
 }
 
 button {
-  background-color: #282c34; /* Green */
+  background-color: #191919;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -103,20 +105,16 @@ button:disabled {
 .sign-in {
   color: #282c34;
   background: white;
-  max-width: 400px;
   margin: 0 auto;
 }
 
-
-
-
-ul, li {
+ul,
+li {
   text-align: left;
   list-style: none;
 }
 
 p {
-  max-width: 500px;
   margin-bottom: 12px;
   line-height: 24px;
   padding: 10px 20px;
@@ -136,6 +134,9 @@ h1 {
   align-items: center;
 }
 
+.center {
+  text-align: center;
+}
 
 .sent {
   flex-direction: row-reverse;
@@ -146,6 +147,7 @@ h1 {
   background: #0b93f6;
   align-self: flex-end;
 }
+
 .received p {
   background: #e5e5ea;
   color: black;

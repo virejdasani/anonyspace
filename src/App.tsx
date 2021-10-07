@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Welcome to the chat room 💬</h1>
+        <h1 className="anonyspace">anonyspace</h1>
         <SignOut />
       </header>
       <section>
@@ -48,13 +48,13 @@ function SignIn() {
   };
 
   return (
-    <center>
+    <div className="center">
       <h1>Minimal Chat Room</h1>
       <button className="sign-in" onClick={signInWithGoogle}>
         Sign in with Google
       </button>
-      <p>Please log in to continue to the chat-room.</p>
-    </center>
+      <p>log in to access anonyspace.</p>
+    </div>
   );
 }
 

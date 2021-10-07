@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-function ChatRoom(props) {
-  const dummy = useRef();
+function ChatRoom(props: any) {
+  const dummy = useRef() as React.MutableRefObject<HTMLInputElement>;
   const messagesRef = props.firestore.collection("messages");
-  const query = messagesRef.orderBy("createdAt").limit(25);
+  const query = messagesRef.orderBy("createdAt").limit(2500);
 
   const [messages] = useCollectionData(query, { idField: "id" });
   const [formValue, setFormValue] = useState("");
 
-  const sendMessage = async e => {
+  const sendMessage = async (e) => {
     e.preventDefault();
 
     const { uid, photoURL } = props.auth.currentUser;
@@ -18,17 +18,17 @@ function ChatRoom(props) {
       text: formValue,
       createdAt: props.firebase.firestore.FieldValue.serverTimestamp(),
       uid,
-      photoURL
+      photoURL,
     });
 
     setFormValue("");
   };
 
   return (
-    <>
+    <div>
       <main>
         {messages &&
-          messages.map(msg => (
+          messages.map((msg: any) => (
             <ChatMessage auth={props.auth} key={msg.id} message={msg} />
           ))}
         <span ref={dummy}></span>
@@ -36,20 +36,20 @@ function ChatRoom(props) {
       <form onSubmit={sendMessage}>
         <input
           value={formValue}
-          onChange={e => setFormValue(e.target.value)}
+          onChange={(e) => setFormValue(e.target.value)}
           placeholder="Type a message"
         />
         <button type="submit" disabled={formValue === ""}>
           Send
         </button>
       </form>
-    </>
+    </div>
   );
 }
 
 export default ChatRoom;
 
-function ChatMessage(props) {
+function ChatMessage(props: any) {
   const { text, uid, photoURL } = props.message;
   const messageClass = uid === props.auth.currentUser.uid ? "sent" : "received";
   const avatar =
