@@ -56,15 +56,24 @@ function ChatMessage(props: any) {
     photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png";
 
   return (
-    <div className={`message ${messageClass}`}>
-      <img src={avatar} alt="avatar" />
-      <p>{text}</p>
-      {createdAt ? <p>{getReadableTime(createdAt.seconds)}</p> : "now"}
+    <div className="messageTime">
+      <div className={`message ${messageClass}`}>
+        <img src={avatar} alt="avatar" />
+        <p>{text}</p>
+      </div>
+      {/* Checks if timeStamp is available, if yes, shows the time, if not, shows "now" */}
+      {createdAt ? (
+        <p className="timeStamp">{getReadableTime(createdAt.seconds)}</p>
+      ) : (
+        <p className="timeStamp">now</p>
+      )}
     </div>
   );
 }
 
-function getReadableTime(seconds) {
+// Gets time from seconds (as stored in firebase)
+function getReadableTime(seconds: number) {
   let unix = new Date(seconds * 1000);
-  return unix.toLocaleTimeString();
+  // This gets [0:5] of the time string which give time in this format: 09:41
+  return unix.toLocaleTimeString().substring(0, 5);
 }
