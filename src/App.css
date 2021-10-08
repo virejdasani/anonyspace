@@ -11,6 +11,7 @@ body {
 
 .anonyspace {
   font-family: 'Chakra Petch', sans-serif;
+  color: #de6f6f;
 }
 
 .App header {
@@ -40,7 +41,7 @@ body {
 main {
   padding: 10px;
   height: 90vh;
-  margin: 10vh 0 0;
+  margin: 22vh 0 0;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -97,14 +98,14 @@ button {
   background-color: transparent;
   border: none;
   color: rgb(192, 192, 192);
-  padding: 15px 32px;
+  padding: 0px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-family: 'Chakra Petch', sans-serif;
   border-radius: 20px;
-
 }
 
 button:disabled {
