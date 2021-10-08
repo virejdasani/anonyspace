@@ -1,5 +1,7 @@
 body {
   background-color: #000000;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .App {
@@ -54,7 +56,7 @@ main::-webkit-scrollbar-track {
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #252525;
+  background: #b95f5f;
 }
 
 form {
