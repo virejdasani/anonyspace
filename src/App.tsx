@@ -49,6 +49,7 @@ function SignIn() {
 
   return (
     <div className="center">
+      <div className="logInPageTitle"></div>
       <h1>
         log in to access <span className="anonyspace">anonyspace</span>
       </h1>

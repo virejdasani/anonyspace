@@ -35,6 +35,9 @@ body {
   justify-content: center;
   height: 100%;
   background-color: rgb(27, 27, 27);
+}
+
+.logInPageTitle {
   margin-top: 55%;
 }
 
