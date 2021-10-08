@@ -1,6 +1,6 @@
 # [anonyspace](https://virejdasani.github.io/anonyspace/)
 
-- A chat app built with React, Firebase and JavaScript and TypeScript
+- A chat app built with React, Firebase, JavaScript, and TypeScript
 
 ### Building
 ```
