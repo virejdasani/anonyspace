@@ -64,9 +64,7 @@ form {
   position: fixed;
   bottom: 0;
   width: 100%;
-  /* padding-left: 5%; */
-  /* padding-right: 5%; */
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   padding-top: 10px;
   display: flex;
   font-size: 1.5rem;
@@ -83,17 +81,16 @@ form button {
 
 input {
   line-height: 1.5;
-  width: 60%;
+  width: 80%;
+  text-align: center;
   font-size: 1.5rem;
   background: rgb(58, 58, 58);
   color: white;
   outline: none;
   border: none;
-  padding: 0 10px;
   font-family: 'Chakra Petch', sans-serif;
-  padding: 30px;
-  border-radius: 20px;
-  margin-left: 17%;
+  border-radius: 14px;
+  margin-left: 10%;
 }
 
 button {
@@ -138,10 +135,19 @@ p {
 }
 
 /* Add media queries for p{max-width} */
-/* For width 200 - 399 */
-@media only screen and (min-width: 200px) and (max-width: 399px) {
+/* For width 200 - 299 */
+@media only screen and (min-width: 200px) and (max-width: 299px) {
   p {
     max-width: 100px;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+}
+
+/* For width 300 - 399 */
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  p {
+    max-width: 150px;
     padding: 5px 10px;
     border-radius: 12px;
   }
@@ -168,7 +174,7 @@ p {
 /* For width 900+ */
 @media only screen and (min-width: 1000px) {
   p {
-    max-width: 600px;
+    max-width: 800px;
     padding: 10px 20px;
     border-radius: 25px;
   }
@@ -182,7 +188,7 @@ p {
 
 .timeStamp {
   overflow-x: hidden;
-  min-width: 40px;
+  min-width: 44px;
 }
 
 h1 {
