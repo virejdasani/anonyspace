@@ -24,7 +24,7 @@ function ChatRoom(props: any) {
     setFormValue("");
 
     // This scrolls down to the bottom of the page
-    document.getElementById("appFooter").scrollIntoView({
+    document.getElementById("recent").scrollIntoView({
       behavior: "smooth",
     });
   };
@@ -38,7 +38,7 @@ function ChatRoom(props: any) {
           ))}
         <span ref={dummy}></span>
         {/* This footer is at the end of the page */}
-        <div id="appFooter"></div>
+        <div id="recent"></div>
       </main>
 
       <form onSubmit={sendMessage}>
