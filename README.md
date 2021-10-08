@@ -1,5 +1,7 @@
 # anonyspace
 
+- A chat app built with React, Firebase and JavaScript and TypeScript
+
 ### Building
 ```
 yarn run predeploy
