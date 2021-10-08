@@ -133,7 +133,7 @@ p {
   line-height: 24px;
   position: relative;
   color: white;
-  text-align: center;
+  text-align: left;
   overflow-wrap: break-word;
   overflow-y: hidden;
 }
