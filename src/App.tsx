@@ -49,11 +49,20 @@ function SignIn() {
 
   return (
     <div className="center">
-      <h1>Minimal Chat Room</h1>
+      <h1>
+        log in to access <span className="anonyspace">anonyspace</span>
+      </h1>
       <button className="sign-in" onClick={signInWithGoogle}>
         Sign in with Google
       </button>
-      <p>log in to access anonyspace.</p>
+
+      <h3 className="credit">
+        <span className="anonyspace">anonyspace</span> is developed and
+        maintained by{" "}
+        <span className="virej">
+          <a href="https://virejdasani.github.io">Virej Dasani</a>
+        </span>
+      </h3>
     </div>
   );
 }

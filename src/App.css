@@ -11,7 +11,7 @@ body {
 
 .anonyspace {
   font-family: 'Chakra Petch', sans-serif;
-  color: #de6f6f;
+  color: #ff8181;
 }
 
 .App header {
@@ -118,6 +118,8 @@ button:disabled {
   color: #282c34;
   background: white;
   margin: 0 auto;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 ul,
@@ -199,6 +201,7 @@ p {
 h1 {
   color: white;
   text-align: center;
+  font-size: 30px;
 }
 
 .message {
@@ -234,4 +237,19 @@ img {
 
 .timeStamp {
   background-color: transparent;
+}
+
+.credit {
+  color: white;
+  padding: 10px;
+  bottom: 0px;
+  position: absolute;
+}
+
+.virej {
+  text-decoration: underline;
+}
+
+a {
+  color: #0b93f6;
 }
