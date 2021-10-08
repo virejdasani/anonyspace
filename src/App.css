@@ -191,6 +191,10 @@ p {
   min-width: 44px;
 }
 
+#recent {
+  margin: 50px;
+}
+
 h1 {
   color: white;
   text-align: center;

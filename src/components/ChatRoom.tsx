@@ -22,12 +22,15 @@ function ChatRoom(props: any) {
     });
 
     setFormValue("");
+  };
 
+  // This scrolls down to the bottom of the page
+  if (document.getElementById("recent")) {
     // This scrolls down to the bottom of the page
     document.getElementById("recent").scrollIntoView({
       behavior: "smooth",
     });
-  };
+  }
 
   return (
     <div>
